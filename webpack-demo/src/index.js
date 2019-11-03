@@ -1,12 +1,16 @@
 import _ from 'loadsh';
+import * as THREE from 'three';
 
 function component() {
-    const element = document.createElement('div');
+  const scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
   
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
   
-    return element;
+  return renderer.domElement;
+  
   }
   
   document.body.appendChild(component());
