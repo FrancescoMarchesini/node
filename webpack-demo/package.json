@@ -16,6 +16,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "bulma": "^0.8.0",
     "loadsh": "0.0.4"
   }
 }
